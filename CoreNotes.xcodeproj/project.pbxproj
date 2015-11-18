@@ -17,6 +17,8 @@
 		3DD72C531BFA60EE00ACA8A1 /* NotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD72C521BFA60EE00ACA8A1 /* NotesTVC.swift */; };
 		3DD72C551BFA614100ACA8A1 /* NewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD72C541BFA614100ACA8A1 /* NewCategoryVC.swift */; };
 		3DD72C571BFA615E00ACA8A1 /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD72C561BFA615E00ACA8A1 /* NewNoteVC.swift */; };
+		3DF448C61BFB829A00D2E904 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF448C51BFB829A00D2E904 /* CoreData.swift */; };
+		3DF448C81BFBED6700D2E904 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF448C71BFBED6700D2E904 /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3DD72C521BFA60EE00ACA8A1 /* NotesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTVC.swift; sourceTree = "<group>"; };
 		3DD72C541BFA614100ACA8A1 /* NewCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryVC.swift; sourceTree = "<group>"; };
 		3DD72C561BFA615E00ACA8A1 /* NewNoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
+		3DF448C51BFB829A00D2E904 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		3DF448C71BFBED6700D2E904 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				3DD72C541BFA614100ACA8A1 /* NewCategoryVC.swift */,
 				3DD72C561BFA615E00ACA8A1 /* NewNoteVC.swift */,
 				3DD72C511BFA5FF500ACA8A1 /* System */,
+				3DF448C51BFB829A00D2E904 /* CoreData.swift */,
+				3DF448C71BFBED6700D2E904 /* Main.swift */,
 			);
 			path = CoreNotes;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 				3DD72C291BFA4BCE00ACA8A1 /* CoreNotes.xcdatamodeld in Sources */,
 				3DD72C571BFA615E00ACA8A1 /* NewNoteVC.swift in Sources */,
 				3DD72C211BFA4BCE00ACA8A1 /* AppDelegate.swift in Sources */,
+				3DF448C61BFB829A00D2E904 /* CoreData.swift in Sources */,
+				3DF448C81BFBED6700D2E904 /* Main.swift in Sources */,
 				3DD72C551BFA614100ACA8A1 /* NewCategoryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +510,7 @@
 				3DD72C4A1BFA4BCE00ACA8A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DD72C4B1BFA4BCE00ACA8A1 /* Build configuration list for PBXNativeTarget "CoreNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +519,7 @@
 				3DD72C4D1BFA4BCE00ACA8A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DD72C4E1BFA4BCE00ACA8A1 /* Build configuration list for PBXNativeTarget "CoreNotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +528,7 @@
 				3DD72C501BFA4BCE00ACA8A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
