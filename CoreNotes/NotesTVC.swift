@@ -53,6 +53,11 @@ class NotesTVC: UITableViewController {
             
             // remove note from core data
             
+            deleteNote(categories[indexPath.section].notes[indexPath.row])
+            
+            // manually delete that note
+            categories[indexPath.section].notes.removeAtIndex(indexPath.row)
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
             
@@ -66,7 +71,7 @@ class NotesTVC: UITableViewController {
        
         let view = UIView(frame: CGRect(x: 20, y: 0, width: 200, height: 40))
         
-        view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        view.backgroundColor = categories[section].category.color ?? UIColor(white: 0, alpha: 0.5)
         
         let label = UILabel(frame: view.frame)
         

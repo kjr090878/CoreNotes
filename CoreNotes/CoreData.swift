@@ -31,11 +31,10 @@ class Category: NSManagedObject {
         
     }
     
-    var name: String? {
+    @NSManaged var name: String?
+    @NSManaged var color: UIColor?
         
-        get { return valueForKey("name") as? String }
-        set { setValue(newValue, forKey: "name") }
-    }
+  
     
     
 }
@@ -49,19 +48,9 @@ class Note: NSManagedObject {
         
     }
     
-    var text: String? {
-        
-        get { return valueForKey("text") as? String }
-        set { setValue(newValue, forKey: "text") }
-    }
-    
-   
-    var category: NSManagedObject? {
-
-        get { return valueForKey("category") as? NSManagedObject }
-        set { setValue(newValue, forKey: "category") }
-        
-    }
+    @NSManaged var text: String?
+    @NSManaged var category: NSManagedObject?
+    @NSManaged var createdAt: NSDate?
     
 }
 
@@ -108,6 +97,8 @@ extension NotesTVC: Fetchable {
  
     }
     
+
+    
 }
 
 extension NewNoteVC: Fetchable {
@@ -130,6 +121,7 @@ extension NewNoteVC: Fetchable {
        let newNote = Note.note()
         newNote?.text = noteTextView.text
         newNote?.category = categories[categoryPicker.selectedRowInComponent(0)]
+        newNote?.createdAt = NSDate()
         
         _appDelegate?.saveContext()
         
@@ -141,11 +133,9 @@ extension NewCategoryVC {
     
     func createCategory() {
         
-        
-        
         let newCategory = Category.category()
         newCategory?.name = categoryNameField.text
-        
+        newCategory?.color = UIColor.softGreen()
         _appDelegate?.saveContext()
    
     }
@@ -169,10 +159,19 @@ extension Fetchable {
         let request = NSFetchRequest(entityName: name)
         
         // Do something with predicates later
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates ?? [])
         
         guard let foundObjects = try? _appDelegate?.managedObjectContext.executeFetchRequest(request) ?? [] else { return  completion(found: [])}
         
         completion(found: foundObjects)
+        
+    }
+    
+    func deleteNote(note: Note) {
+        
+        _appDelegate?.managedObjectContext.deleteObject(note)
+        
+        _appDelegate?.saveContext()
         
     }
    

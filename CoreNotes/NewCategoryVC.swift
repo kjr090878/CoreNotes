@@ -10,9 +10,13 @@ import UIKit
 import CoreData
 
 class NewCategoryVC: UIViewController {
-
-    @IBOutlet weak var categoryNameField: UITextField!
-
+    
+    @IBOutlet weak var categoryNameField: UITextField! {
+    
+        didSet { categoryNameField.delegate = self }
+    
+    }
+    
     @IBOutlet weak var categoryDatePicker: UIDatePicker!
     
     
@@ -28,6 +32,5 @@ class NewCategoryVC: UIViewController {
         createCategory()
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
+ 
 }
